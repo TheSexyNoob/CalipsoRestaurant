@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalipsoRestaurant.Views.MenuPage"
+             xmlns:vm="clr-namespace:CalipsoRestaurant.ViewModels"
+             Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <vm:MenuViewModel />
+    </ContentPage.BindingContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+            <ContentView Padding="0,10,0,0">
+                <Image Source="logo1.png" VerticalOptions="EndAndExpand"/>
+            </ContentView>
+         </StackLayout>
+       
+         
+            <StackLayout Grid.Row="1" Orientation="Vertical" Padding="10,20,10,10"  >
+                <Label TextColor="Black" FontSize="Large" HorizontalOptions="Center">Menú</Label>
+                <Label BackgroundColor="#CD9777" HeightRequest="13"></Label>
+            <ScrollView>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <StackLayout >
+                        <Label TextColor="Black" FontSize="Large"  >Tipo de platillo</Label>
+                    </StackLayout>
+                    <StackLayout Grid.Row="1">
+
+                        <Label>Comidas Rapidas</Label>
+                        <Image Source="rapida.png"></Image>
+                        <Label>Mariscos</Label>
+                        <Image Source="maricos.jpg"></Image>
+                        <Label>Carnes Rojas</Label>
+                        <Image Source="roja.jpg"></Image>
+                        <Label>Carnes Blancas</Label>
+                        <Image Source="blanca.jpg"></Image>
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+        </StackLayout>
+
+        <StackLayout Grid.Row="2" Orientation="Vertical" Padding="10,20,10,10"  >
+          
+            <Label BackgroundColor="#CD9777" HeightRequest="13"></Label>
+            <ScrollView  >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <StackLayout >
+                        <Label TextColor="Black" FontSize="Large"  >Tipo de Bebida</Label>
+                    </StackLayout>
+                    <StackLayout Grid.Row="1">
+
+                        <Label>Gaseosas</Label>
+                        <Image Source="naturales.png"></Image>
+                        <Label>Naturales</Label>
+                        <Image Source="gaseosas.png"></Image>
+                        
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+
+        </StackLayout>
+
+    </Grid>
+
+</ContentPage>
