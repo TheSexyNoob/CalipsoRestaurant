@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:customcontrol="clr-namespace:CalipsoRestaurant.ViewModel"
+             xmlns:lv="clr-namespace:LaavorRatingConception;assembly=RatingConception"
+             x:Class="CalipsoRestaurant.View.Feedback"
+             Title="{Binding Title}">
+    <ScrollView>
+        <StackLayout BackgroundColor="White">
+            <BoxView BackgroundColor="#FFB730" HeightRequest="85"/>
+
+            <Label Text="Compartanos su opinión" 
+                   FontSize="Title" 
+                   TextColor="Black" 
+                   Padding="0,20,0,0"
+                   HorizontalTextAlignment="Center" />
+
+            <BoxView BackgroundColor="#CD9777" 
+                     HorizontalOptions="Center" 
+                     HeightRequest="3" 
+                     WidthRequest="450" />
+
+            <Label Text="¿Qué tan satisfecho quedó con el" 
+                   FontSize="18" 
+                   TextColor="Black" 
+                   HorizontalTextAlignment="Center"
+                   Padding="0,10,0,0"/>
+
+            <Label Text="servicio?" 
+                   FontSize="18" 
+                   TextColor="Black" 
+                   HorizontalTextAlignment="Center"
+                   Padding="0,-5,0,0"/>
+
+            <!--https://xamarincodingtutorial.blogspot.com/2019/04/p_29.html-->
+
+            <!-- Place new controls here -->
+            <!--<Label Text="RatingConception!" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />-->
+
+            <!--<Label Text="" 
+           HorizontalOptions="Center"
+           x:Name="index_star"
+           VerticalOptions="CenterAndExpand" />
+
+            <Label Text="" 
+           HorizontalOptions="Center"
+           x:Name="value_star" 
+           VerticalOptions="CenterAndExpand" />-->
+
+            <lv:RatingConception ItemsNumber="5" DrawType="Star" 
+                    ImageWidth="35" ImageHeight="35"  DesignType="Standard" ColorUI="YellowLight" 
+                   
+                    x:Name="ratingStar1"
+                    Margin="0,0,0,15" Voted="RatingConception_Voted" />
+
+            <!--https://github.com/jsuarezruiz/xamarin-forms-gtk-movies-sample-->
+
+            <BoxView BackgroundColor="#CD9777" 
+                     HorizontalOptions="Center" 
+                     HeightRequest="3" 
+                     WidthRequest="450" />
+
+            <Grid ColumnSpacing="1" RowSpacing="1" Padding="85,20,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="32"></RowDefinition>
+                    <RowDefinition Height="70"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"></ColumnDefinition>
+                    <ColumnDefinition Width="200"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <ImageButton Grid.Row="0"
+                             Grid.RowSpan="2"
+                             CornerRadius="15"
+                             HorizontalOptions="Center"
+                             VerticalOptions="CenterAndExpand"
+                             Source="https://cdn2.salsadesoja.com/wp-content/uploads/2017/10/hamburguesa-con-salsa-de-soja-portada.jpg"/>
+
+                <Label Grid.Row="0"
+                       Grid.Column="1" 
+                       Text="Nombre Platillo" 
+                       FontAttributes="Bold"
+                       FontSize="15"
+                       TextColor="Black"
+                       Padding="5,15,0,0"/>
+
+                <Label Grid.Row="1"
+                       Grid.Column="1" 
+                       Text="Lorem Ipsum is a simply dummy text adasdasd asdad adasdasd asdasd" 
+                       TextColor="Black"
+                       Padding="5,0,0,15"/>
+            </Grid>
+            <Label Text="¿Qué tan satisfecho quedó con la orden?" 
+                   FontSize="18" 
+                   TextColor="Black" 
+                   HorizontalTextAlignment="Center"
+                   Padding="0,0,0,0"/>
+
+            <lv:RatingConception ItemsNumber="5" DrawType="Star" 
+                    ImageWidth="35" ImageHeight="35"  DesignType="Standard" ColorUI="YellowLight" 
+                   
+                    x:Name="ratingStar2"
+                    Margin="0,0,0,15" Voted="RatingConception_Voted" />
+
+            <BoxView BackgroundColor="#CD9777" 
+                     HorizontalOptions="Center" 
+                     HeightRequest="3" 
+                     WidthRequest="450"/>
+
+            <Label Text="Comentanos que le pareció la comida" 
+                   FontSize="18" 
+                   TextColor="Black" 
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   Padding="0,25,0,25"/>
+
+            <RelativeLayout HorizontalOptions="Center"
+                            VerticalOptions="Center">
+                <BoxView BackgroundColor="#C4C4C4" 
+                         HorizontalOptions="Center" 
+                         HeightRequest="250" 
+                         WidthRequest="450"/>
+
+                <BoxView BackgroundColor="White" 
+                         Margin="1,1,1,1"
+                         HorizontalOptions="Center" 
+                         HeightRequest="248" 
+                         WidthRequest="448" />
+
+                <Label Text="Hola adasdasdas asdas dasda sdad aad asdasdads asdasdasdaaa asdad asd asdad adasd asda sdasdasdad adasd asdad dasdaaddd"
+                       HorizontalOptions="Center"
+                       HeightRequest="246"
+                       WidthRequest="446"
+                       Padding="15,15,10,0"
+                       TextColor="Black"/>
+            </RelativeLayout>
+
+            <Button x:Name="btnEnviar"
+                    Text="Enviar"
+                    Margin="125,15,125,100"
+                    FontAttributes="Bold"
+                    FontSize="Large"
+                    FontFamily="Roboto"
+                    BackgroundColor="#FFB703"
+                    TextColor="Black"
+                    CornerRadius="10"/>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

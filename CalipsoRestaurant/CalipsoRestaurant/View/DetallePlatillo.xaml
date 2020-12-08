@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:CalipsoRestaurant.ViewModel"
+             x:Class="CalipsoRestaurant.View.DetallePlatillo"
+              Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <vm:DetallePlatilloViewModel />
+    </ContentPage.BindingContext>
+    <AbsoluteLayout>
+       
+    <Image Source="menu_icon_small.png"
+               x:Name="HomeButton"
+               HeightRequest="90"
+               VerticalOptions="Start"
+               AbsoluteLayout.LayoutBounds="-15,0,80,80"
+               />
+    <Image Source="cart_icon_small_white_border.png"
+               x:Name="CartButton"
+               HeightRequest="90"
+               VerticalOptions="Start"
+               AbsoluteLayout.LayoutBounds="1,0,80,80"
+               AbsoluteLayout.LayoutFlags="XProportional"
+               />
+
+    <BoxView BackgroundColor="RosyBrown"
+              AbsoluteLayout.LayoutBounds="10,145,0.95,2"
+                 AbsoluteLayout.LayoutFlags="WidthProportional"/>
+    <Image Source="food_1_image.png"
+               AbsoluteLayout.LayoutBounds="0.5,150,225,225"
+               AbsoluteLayout.LayoutFlags="XProportional"
+               x:Name="EditItemButton"/>
+    <BoxView BackgroundColor="RosyBrown"
+              AbsoluteLayout.LayoutBounds="10,380,0.95,2"
+                 AbsoluteLayout.LayoutFlags="WidthProportional"/>
+    <Label Text="Descripción breve del platillo seleccionado por el cliente"
+               FontSize="30"
+               AbsoluteLayout.LayoutBounds="0.5,400,300,200"
+               AbsoluteLayout.LayoutFlags="XProportional" 
+               FontFamily="Bahnschrift"/>
+    <BoxView BackgroundColor="RosyBrown"
+                 AbsoluteLayout.LayoutBounds="10,620,0.95,2"
+                 AbsoluteLayout.LayoutFlags="WidthProportional"/>
+    <Label Text="Precio: $$$"
+               FontSize="35"
+               FontAttributes="Bold"
+               FontFamily="Bahnschrift "
+               TextColor="Black"
+               AbsoluteLayout.LayoutBounds="0.5,650"
+               AbsoluteLayout.LayoutFlags="XProportional"/>
+    <BoxView  AbsoluteLayout.LayoutBounds="0.5,0.985,0.90,55"
+                AbsoluteLayout.LayoutFlags="YProportional , XProportional, WidthProportional" 
+                BackgroundColor="#FFB703"
+                 CornerRadius="20"/>
+    <Label Text="Agregar"
+               FontSize="30"
+               AbsoluteLayout.LayoutBounds="0.5,0.99,110,55"
+               AbsoluteLayout.LayoutFlags="YProportional , XProportional" 
+               TextColor="White"
+               FontAttributes="Bold"/>
+    </AbsoluteLayout>
+
+</ContentPage>

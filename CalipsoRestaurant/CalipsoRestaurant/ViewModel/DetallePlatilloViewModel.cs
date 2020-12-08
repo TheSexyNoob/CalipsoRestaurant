@@ -1,15 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
-namespace CalipsoRestaurant.ViewModels
+namespace CalipsoRestaurant.ViewModel
 {
-    public class MenuViewModel : BaseViewModel
+    class DetallePlatilloViewModel : BaseViewModel
     {
-        public MenuViewModel()
+        public DetallePlatilloViewModel()
         {
-            Title = "PAGINA PRINCIPAL";
+            Title = "Detalle Platillo";
             OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
         }
 

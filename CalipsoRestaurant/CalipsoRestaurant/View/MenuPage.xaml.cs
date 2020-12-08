@@ -3,7 +3,7 @@ using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace CalipsoRestaurant.Views
+namespace CalipsoRestaurant.View
 {
     public partial class MenuPage : ContentPage
     {

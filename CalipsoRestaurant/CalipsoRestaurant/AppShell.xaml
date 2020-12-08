@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:local="clr-namespace:CalipsoRestaurant.Views"
+       xmlns:local="clr-namespace:CalipsoRestaurant.View"
        Title="CalipsoRestaurant"
        x:Class="CalipsoRestaurant.AppShell">
 
@@ -82,11 +82,14 @@
     <FlyoutItem Title="Menu" Icon="icon_about.png">
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:MenuPage}" />
     </FlyoutItem>
-         <FlyoutItem Title="DetalleOrden" Icon="icon_about.png">
+     <FlyoutItem Title="DetalleOrden" Icon="icon_about.png">
         <ShellContent Route="DetalleOrden" ContentTemplate="{DataTemplate local:DetalleOrden}" />
     </FlyoutItem>
-        <FlyoutItem Title="DetallePlatillo" Icon="icon_about.png">
+     <FlyoutItem Title="DetallePlatillo" Icon="icon_about.png">
         <ShellContent Route="DetallePlatillo" ContentTemplate="{DataTemplate local:DetallePlatillo}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Feedback" Icon="icon_about.png">
+        <ShellContent Route="Feedback" ContentTemplate="{DataTemplate local:Feedback}" />
     </FlyoutItem>
      
 </Shell>

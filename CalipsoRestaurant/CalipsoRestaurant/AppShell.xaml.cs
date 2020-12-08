@@ -1,6 +1,4 @@
-﻿using CalipsoRestaurant.ViewModels;
-using CalipsoRestaurant.Views;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
 
@@ -11,13 +9,10 @@ namespace CalipsoRestaurant
         public AppShell()
         {
             InitializeComponent();
-      
         }
 
-        private async void OnMenuItemClicked(object sender, EventArgs e)
+        private void OnMenuItemClicked(object sender, EventArgs e)
         {
-          
-
         }
     }
 }
