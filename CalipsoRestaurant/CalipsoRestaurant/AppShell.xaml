@@ -85,5 +85,8 @@
          <FlyoutItem Title="DetalleOrden" Icon="icon_about.png">
         <ShellContent Route="DetalleOrden" ContentTemplate="{DataTemplate local:DetalleOrden}" />
     </FlyoutItem>
+        <FlyoutItem Title="DetallePlatillo" Icon="icon_about.png">
+        <ShellContent Route="DetallePlatillo" ContentTemplate="{DataTemplate local:DetallePlatillo}" />
+    </FlyoutItem>
      
 </Shell>
